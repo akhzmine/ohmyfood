@@ -1,0 +1,53 @@
+#content {
+    position: relative;
+    animation: contentappear 3.5s ease-in-out both;
+}
+
+.location {
+    background-color: $gray-medium;
+    @extend %container-sm;
+    @include flex(row, center, center, wrap);
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__address {
+        font-style: normal;
+    }
+}
+
+.restaurants {
+    background-color: $gray-light;
+    text-align: center;
+
+    h2 {
+        padding: 0 rem(40);
+    }
+
+    &__description {
+        font-size: rem(18);
+        font-weight: 300;
+        margin-bottom: rem(30);
+    }
+}
+
+.steps {
+    margin: rem(30) 0;
+
+    @media #{$medium-up} {
+        &__list {
+            @include flex(row, center, space-between, wrap)
+        }
+    }
+}
+
+.cards {
+    background-color: $gray-light;
+
+    @media #{$medium-up} {
+        &__list {   
+            @include flex(row, center, space-between, wrap)
+        }
+    }
+}

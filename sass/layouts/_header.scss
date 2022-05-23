@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+    z-index: 1;
+    @extend %container-sm;
+    @include header-shadow;
+    @include flex(row, center, center, nowrap);
+
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+        font-size: rem(30);
+        text-align: center;
+        text-transform: lowercase;
+        margin: 0 auto;
+    }
+
+    &__navbar a {
+        display: inline-block;
+        font-size: rem(18);
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+    }
+
+}
